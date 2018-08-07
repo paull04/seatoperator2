@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>588</width>
+    <height>515</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>10</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>교탁</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>588</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>menu</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_file_2"/>
+    <addaction name="actionSave_file_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit_4"/>
+   </widget>
+   <widget class="QMenu" name="menuSeat_menu">
+    <property name="title">
+     <string>seat menu</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_create_seat"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="action_3"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuSeat_menu"/>
+  </widget>
+  <action name="actionFile">
+   <property name="text">
+    <string>file</string>
+   </property>
+  </action>
+  <action name="actionFile_save">
+   <property name="text">
+    <string>file save</string>
+   </property>
+  </action>
+  <action name="actionLoad_file">
+   <property name="text">
+    <string>load file</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>quit</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>help</string>
+   </property>
+  </action>
+  <action name="actionRecent_file">
+   <property name="text">
+    <string>recent file</string>
+   </property>
+  </action>
+  <action name="actionQuit_2">
+   <property name="text">
+    <string>quit</string>
+   </property>
+  </action>
+  <action name="actionSave_file">
+   <property name="text">
+    <string>save file</string>
+   </property>
+  </action>
+  <action name="actionLoad_file_2">
+   <property name="text">
+    <string>load file</string>
+   </property>
+  </action>
+  <action name="actionSave_file_2">
+   <property name="text">
+    <string>save file</string>
+   </property>
+  </action>
+  <action name="actionQuit_3">
+   <property name="text">
+    <string>quit</string>
+   </property>
+  </action>
+  <action name="actionQuit_4">
+   <property name="text">
+    <string>quit</string>
+   </property>
+  </action>
+  <action name="action_create_seat">
+   <property name="text">
+    <string>create seat</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>짝만들기</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>짝설정</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>자리 바꾸기 설정</string>
+   </property>
+  </action>
+  <action name="actionDelete_seat">
+   <property name="text">
+    <string>delete seat</string>
+   </property>
+  </action>
+  <action name="actionDelete_mode">
+   <property name="text">
+    <string>activate delete mode</string>
+   </property>
+  </action>
+  <action name="actionDeactivate_delete_mode">
+   <property name="text">
+    <string>deactivate delete</string>
+   </property>
+  </action>
+  <action name="actionActivate_change_name">
+   <property name="text">
+    <string>activate set name</string>
+   </property>
+  </action>
+  <action name="actionDeacivate_change_name">
+   <property name="text">
+    <string>deacivate set name</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>짝 설정</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>짝 설정 비활성화</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>자리 고정 설정</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>자리 고정 설정 비활성화</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
