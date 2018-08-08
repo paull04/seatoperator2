@@ -10,8 +10,12 @@ import sys
 import numpy as np
 from os.path import exists, basename, splitext
 import gc
-from blist import blist
 from itertools import chain
+
+try:
+    from blist import blist
+except ModuleNotFoundError:
+    blist = list
 
 
 class subwidget(QDialog, Ui_Dialog):

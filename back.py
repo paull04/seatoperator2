@@ -8,7 +8,6 @@ import copy
 import pickle
 from time import time
 import numpy as np
-import numba as nb
 
 from gstes import GsTes
 
