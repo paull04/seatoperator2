@@ -229,36 +229,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         finally:
             QApplication.restoreOverrideCursor()
 
-    @staticmethod
-    def flatten(name_list, filter):
-        try:
-            name_list.remove(filter)
-        except:
-            for x in name_list:
-                try:
-                    if type(x) != list:
-                        continue
-                    x.remove(filter)
-                except:
-                    pass
 
     @pyqtSlot()
     def change_seat(self):
         if not self.seat:
             return
         QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
-        lock_list = [x.name for x in self.seat if x.lock_bool]
-        print(lock_list)
-        extract = back.ExtractName(seat_list=self.seat,
+        seat = [x for x in self.seat]
+        lock_list = [x for x in self.seat if x.lock_bool]
+
+        for x in lock_list:
+            seat.remove(x)
+
+        extract = back.ExtractName(seat_list=seat,
                                    couple_ov_op=self.couple_ov_op,
                                    gender_set=self.gender_set)
         name_list = extract.extract_name()
-        print(name_list)
-        for x in name_list:
-            if not x:
-                continue
-            for y in lock_list:
-                MainWindow.flatten(x, y)
+
 
         name_list, none_gender_name_list, boy_name_list, girl_name_list = name_list
         self.history.append(name_list)
@@ -280,15 +267,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         it = iter(name_list)
         couple = []
         for w in range(len(name_list)):
-            if not self.seat[w].name or self.seat[w].name in couple:
-                continue
-            self.seat[w].name = next(it)
-            self.seat[w].setText(self.seat[w].name)
+            seat[w].name = next(it)
+            seat[w].setText(self.seat[w].name)
             if self.couple_ov_op:
-                if type(self.seat[w].couple) != str:
-                    self.seat[w].couple.name = next(it)
-                    self.seat[w].couple.setText(self.seat[w].couple.name)
-                    couple.append(self.seat[w].couple.name)
+                if type(seat[w].couple) != str:
+                    seat[w].couple.name = next(it)
+                    seat[w].couple.setText(seat[w].couple.name)
+                    couple.append(seat[w].couple.name)
         QApplication.restoreOverrideCursor()
 
     def resizeEvent(self, a0: QResizeEvent):
