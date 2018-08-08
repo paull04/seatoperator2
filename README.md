@@ -6,4 +6,4 @@
 3. numpy -> pip install numpy
 
 실행 방법
-main.py 실행
+1. main.py 실행
