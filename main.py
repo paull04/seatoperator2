@@ -252,12 +252,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         print("전체:{0}\n 무성 : {1}\n 남자 : {2}\n, 여 자 : {3}\n".
               format(name_list, none_gender_name_list, boy_name_list, girl_name_list))
-        name_list = back.ChangeSeat.change_seat(name_list = self.history,
-                                                couple_ov_op = self.couple_ov_op,
-                                                seat_ov_op = self.seat_ov_op,
-                                                none_gender = none_gender_name_list,
-                                                boy_seat = boy_name_list,
-                                                girl_seat = girl_name_list)
+        name_list = back.ChangeSeat.change_seat(name_list=self.history,
+                                                couple_ov_op=self.couple_ov_op,
+                                                seat_ov_op=self.seat_ov_op,
+                                                none_gender=none_gender_name_list,
+                                                boy_seat=boy_name_list,
+                                                girl_seat=girl_name_list)
         if type(name_list) == str:
             sub(name_list)
             QApplication.restoreOverrideCursor()
@@ -266,14 +266,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         print(name_list)
         it = iter(name_list)
         couple = []
-        for w in range(len(name_list)):
+        w = 0
+        while w < len(name_list):
             seat[w].name = next(it)
-            seat[w].setText(self.seat[w].name)
+            seat[w].setText(seat[w].name)
             if self.couple_ov_op:
                 if type(seat[w].couple) != str:
                     seat[w].couple.name = next(it)
                     seat[w].couple.setText(seat[w].couple.name)
                     couple.append(seat[w].couple.name)
+                    w += 1
+            w += 1
         QApplication.restoreOverrideCursor()
 
     def resizeEvent(self, a0: QResizeEvent):

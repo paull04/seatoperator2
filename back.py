@@ -83,6 +83,7 @@ class ChangeSeat:
                 if none_gender:
                     shuffle(none_gender)
                     join_seat(new_name, none_gender)
+
                     print(new_name)
 
                 if boy_seat:
@@ -262,6 +263,8 @@ class Button(QPushButton):
     @QtCore.pyqtSlot()
     def lock(self):
         self.lock_bool = False if self.lock_bool else True
+        self.couple.couple = None
+        self.couple = "None_gender"
 
     @QtCore.pyqtSlot()
     def show_txt(self):
