@@ -18,6 +18,7 @@ class dialog2(QDialog, Ui_Set_Seat_Dialog):
         self.seat_overlap = self.checkBox_3.isChecked()
     def return_value(self):
         return self.couple_overlap, self.seat_overlap, self.gender
+
 if __name__=="__main__":
     import sys
     a=QApplication(sys.argv)
